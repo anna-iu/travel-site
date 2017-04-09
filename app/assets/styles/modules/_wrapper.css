@@ -1,0 +1,30 @@
+.wrapper {
+	padding-left: 18px;
+	padding-right: 18px;
+	max-width: 1236px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+/*to clean extra margin on the right side*/
+	
+	&--medium {
+		max-width: 976px;
+	}
+	
+	&--b-margin {
+		margin-bottom: 1rem;
+		
+		@mixin atSmall {
+			margin-bottom: 3.875rem;
+		}
+	}
+	
+/*To get rid off extra padding because of nested wrapper: 
+so wrapper nested in the wrapper won't have double padding*/
+	
+	.wrapper {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
